@@ -127,11 +127,11 @@ class PingPong():
 
         if action == 0:
             self.paddle_left()
-            self.reward += .1
+            self.reward -= .1
 
         if action == 2:
             self.paddle_right()
-            self.reward += .1
+            self.reward -= .1
 
         self.run_frame()
 

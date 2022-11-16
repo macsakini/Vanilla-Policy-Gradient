@@ -1,13 +1,18 @@
+import sys
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import torch.nn.functional as F
 
 
 class VPGModel(nn.Module):
     def __init__(self, state_space, action_space, lr):
         super(VPGModel, self).__init__()
+
         self.state_space = state_space
+
         self.action_space = action_space
+
         self.lr = lr
 
         self.model = nn.Sequential(
